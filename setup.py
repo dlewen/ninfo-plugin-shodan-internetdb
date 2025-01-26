@@ -16,6 +16,7 @@ setup(name='ninfo-plugin-shodan-internetdb',
     include_package_data=True,
     install_requires=[
         "ninfo",
+        "requests",
     ],
     entry_points = {
         'ninfo.plugin': [
