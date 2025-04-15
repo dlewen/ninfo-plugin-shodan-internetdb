@@ -16,6 +16,10 @@ class internetdb_plug(PluginBase):
 
     def get_info(self, arg):
         print(arg)
-        return requests.get("https://internetdb.shodan.io/"+arg).json()
+        ret=requests.get("https://internetdb.shodan.io/"+arg).json()
+        if ret:
+            return ret
+        else:
+            return {}
 
 plugin_class = internetdb_plug
